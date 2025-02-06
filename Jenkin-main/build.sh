@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "Building application..."
-docker build -t your-username/capstone:latest .
+docker build -t manoj1904/devops:latest .
