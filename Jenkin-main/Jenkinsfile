@@ -10,14 +10,14 @@ pipeline {
         
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t your-username/capstone:latest .'
+                sh 'docker build -t manoj1904/devops:latest .'
             }
         }
         
         stage('Push to Docker Hub') {
             steps {
-                sh 'docker login -u your-username -p your-password'
-                sh 'docker push your-username/capstone:latest'
+                sh 'docker login -u manoj1904 -p Manoj@19'
+                sh 'docker push manoj1904/devops:latest'
             }
         }
         
