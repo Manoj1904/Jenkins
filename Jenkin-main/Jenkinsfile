@@ -1,29 +1,19 @@
 pipeline {
     agent any
-    
     stages {
         stage('Clone Repository') {
             steps {
                 git 'https://github.com/Manoj1904/Jenkins.git'
             }
         }
-        
-        stage('Build Docker Image') {
+        stage('Build') {
             steps {
-                sh 'docker build -t manoj1904/devops:latest .'
+                echo 'Building the project...'
             }
         }
-        
-        stage('Push to Docker Hub') {
-            steps {
-                sh 'docker login -u manoj1904 -p Manoj@19'
-                sh 'docker push manoj1904/devops:latest'
-            }
-        }
-        
         stage('Deploy') {
             steps {
-                sh './deploy.sh'
+                echo 'Deploying the project...'
             }
         }
     }
