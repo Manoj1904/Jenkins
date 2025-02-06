@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    image: your-username/capstone:latest
+    ports:
+      - "8080:80"
+    restart: always
